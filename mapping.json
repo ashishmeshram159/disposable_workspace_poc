@@ -1,0 +1,51 @@
+{
+  "projectName": "site",
+  "components": [
+    { "name": "Hero", "preset": "hero" },
+    { "name": "FeatureGrid", "preset": "feature-grid" },
+    { "name": "RichText", "preset": "rich-text" },
+    { "name": "Footer", "preset": "footer" }
+  ],
+  "pages": [
+    {
+      "route": "",
+      "menuLabel": "Home",
+      "title": "Welcome",
+      "sections": [
+        {
+          "component": "Hero",
+          "props": {
+            "headline": "Ship sites at lightspeed",
+            "subheadline": "Generate → Build → Ship",
+            "ctaText": "Get Started"
+          }
+        },
+        {
+          "component": "FeatureGrid",
+          "props": {
+            "items": [
+              { "title": "Speed", "desc": "From JSON to build in minutes" },
+              { "title": "Simplicity", "desc": "No local Node needed" },
+              { "title": "Scale", "desc": "CI-friendly & reproducible" }
+            ]
+          }
+        }
+      ],
+      "footer": { "component": "Footer", "props": { "text": "© 2025" } }
+    },
+    {
+      "route": "about",
+      "menuLabel": "About",
+      "title": "About us",
+      "sections": [
+        {
+          "component": "RichText",
+          "props": {
+            "html": "<p>We turn structured content into production builds.</p><p>Powered by Angular standalone components.</p>"
+          }
+        }
+      ],
+      "footer": { "component": "Footer", "props": { "text": "Built with love." } }
+    }
+  ]
+}
